@@ -16,6 +16,7 @@ class Sequential:
             if isinstance(dout, tuple):        # Dense returns (dX, dW, db)
                 dout, dW, db = dout
                 layer.dW, layer.db = dW, db    # cache for optimizer
+        return dout
 
     def train_step(self, X, y):
         y_pred = self.forward(X)
