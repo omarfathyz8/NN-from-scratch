@@ -1,5 +1,5 @@
 class SGD:
-    def __init__(self, lr=0.1):
+    def __init__(self, lr=1.0):
         self.lr = lr
 
     def step(self, layers):
