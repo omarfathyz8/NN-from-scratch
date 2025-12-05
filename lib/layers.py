@@ -6,9 +6,9 @@ class Layer:
 
 class Dense(Layer):
     def __init__(self, in_features, out_features):
-        self.W = np.random.randn(in_features, out_features) * 1.0
+        self.W = np.random.randn(in_features, out_features) * 0.01
         self.b = np.zeros((1, out_features))
-        self.X, self.Z = None, None          # cache for backward
+        self.X, self.Z = None, None
 
     def forward(self, X):
         self.X = X
